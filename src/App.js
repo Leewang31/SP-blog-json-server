@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 const Post = lazy(() => import ('./blogComponent/Post'));
 const PostDetail = lazy(() => import ('./blogComponent/PostDetail'));
 const Home = lazy(() => import ('./blogComponent/Home'));
-const Profile = lazy(() => import ('./blogComponent/Profile'));
+const Setting = lazy(() => import ('./blogComponent/Setting'));
 const Write = lazy(() => import ('./blogComponent/Write'));
 const Loading = lazy(() => import('./component/Loading'));
 
@@ -59,7 +59,7 @@ function App() {
                             <Route path="/post" element={<Post posts={posts} isPending={isPending}/>}/>
                             <Route path="/post/:id" element={<PostDetail/>}/>
                             <Route path="/write/:id" element={<Write/>}/>
-                            <Route path="/profile" element={<Profile/>}/>
+                            <Route path="/setting" element={<Setting/>}/>
                         </Routes>
                     </Suspense>
                 </div>
