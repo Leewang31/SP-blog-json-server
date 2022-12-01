@@ -54,17 +54,17 @@ function App() {
                 <Navbar/>
                 <div className="windowArea">
                     <Suspense fallback={<Loading/>}>
-                        <Routes>
+                        <Routes >
                             <Route path="/" element={<Home posts={posts}/>}/>
                             <Route path="/post" element={<Post posts={posts} isPending={isPending}/>}/>
                             <Route path="/post/:id" element={<PostDetail/>}/>
-                            <Route path="/write/:id" element={<Write/>}/>
+                            <Route path="/write" element={<Write/>}/>
                             <Route path="/setting" element={<Setting/>}/>
                         </Routes>
                     </Suspense>
                 </div>
-            </div>
             <Footer/>
+            </div>
         </BrowserRouter>
     )
         ;

@@ -30,12 +30,16 @@
     height: auto;
     min-height: 100%;
     padding-bottom:20px;
+    display: flex;
+    justify-content: center;
 }
 .windowArea{
-    margin: 20px 200px 40px 200px;
+    margin-top: 20px ;
+    margin-bottom: 40px;
     padding: 20px;
     position: relative;
     background-color: #feb47b;
+    max-width: 800px;
     min-height: 80px;
     border-radius: 10px;
 }

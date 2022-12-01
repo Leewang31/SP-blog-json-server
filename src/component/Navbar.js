@@ -22,7 +22,7 @@ const Navbar = () => {
         <nav className="navbar">
             <Link to ="/"><Button>Home</Button></Link>
             <Link to ="/post"><Button>Post</Button></Link>
-            <Link to ="/write/:id"><Button>Write</Button></Link>
+            <Link to ="/write"><Button>Write</Button></Link>
             <Link to ="/setting"><Button>Setting</Button></Link>
         </nav>
     )
