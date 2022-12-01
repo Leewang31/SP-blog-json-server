@@ -1,0 +1,22 @@
+.write-title{
+    border: 0;
+    min-height: 38px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFFBC1;
+    font-size: large;
+    font-weight: bold;
+}
+.write-body{
+    margin-top: 20px;
+    border: 0;
+    min-height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFFBC1;
+    font-size: large;
+}
+.write-button-div{
+    display: flex;
+    justify-content:space-evenly;
+}
