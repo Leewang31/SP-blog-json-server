@@ -3,9 +3,10 @@ import {useState} from "react";
 import {Button} from "../util/buttonStyled"
 import {fetchPost} from "../util/api";
 
-const Write = () => {
+const PostEdit = () =>{
     const [title,setTitle] = useState("")
     const [body,setBody] = useState("")
+
     const navigate = useNavigate();
 
     const clickCancel = () => {
@@ -35,4 +36,5 @@ const Write = () => {
         </div>
     )
 }
-export default Write;
+
+export default PostEdit;

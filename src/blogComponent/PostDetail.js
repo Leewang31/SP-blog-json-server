@@ -1,42 +1,17 @@
 import {useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
 import Loading from "../component/Loading";
-
+import {Button} from "../util/buttonStyled"
+import useFetch from "../util/useFetch";
+import {fetchDelete} from "../util/api";
 
 const PostDetail = () => {
     const {id} = useParams();
+    const [posts, isPending, error] = useFetch(`http://localhost:3001/posts/${id}`);
+    const onClickButton =(e)=>{
+        e.preventDefault();
+        fetchDelete('http://localhost:3001/posts/',id)
+    }
 
-    const [posts, setData] = useState(null);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const abortCont = new AbortController();
-
-        setTimeout(() => {
-            //요청과 통신하거나 중단하는 데에 사용하는 신호 역할
-            fetch(`http://localhost:3001/posts/${id}`, {signal: abortCont.signal})
-                .then(res => {
-                    if (!res.ok) {
-                        // error coming back from server
-                        throw Error('could not fetch the data for that resource');
-                    }
-                    return res.json();
-                })
-                .then(data => {
-                    setIsPending(false);
-                    setData(data);
-                    setError(null);
-                })
-                .catch(err => {
-                    setIsPending(false);
-                    setError(err.message);
-                })
-        }, 1000);
-
-        // abort the fetch. 완료되기 전에 DOM 요청 중단
-        return () => abortCont.abort();
-    }, [])
     return (
         <div className="postDetail">
             {isPending && <Loading/>}
@@ -47,7 +22,10 @@ const PostDetail = () => {
                 </div>
                 <div className='postDetail-content-body'>
                     <span>{posts.body}</span>
-                    </div>
+                </div>
+                <div className='post-btn'>
+                    <Button onClick={onClickButton}>삭제</Button>
+                </div>
             </div>}
         </div>
     )
