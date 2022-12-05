@@ -1,7 +1,7 @@
 const Loading = () => {
     return (
         <div className="loading">
-            <div>Loading</div>
+            <img src='Spinner.svg' alt='로딩중'/>
         </div>
     )
 }

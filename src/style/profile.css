@@ -1,0 +1,87 @@
+.home-main {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    background-color: #ff7e5f;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.home-profile-img {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-item: center;
+}
+
+.home-profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 20px 0px 20px 0px;
+}
+
+.home-profile-text-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.home-profile-text-name > span {
+    color: #ffffff;
+}
+
+.home-profile-text-detail > span {
+    color: #ffffff;
+}
+
+.setting-main {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    background-color: #ff7e5f;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.setting-profile-img {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-item: center;
+}
+.setting-profile-img:hover{
+    transition:  0.3s;
+    opacity: 60%;
+}
+.setting-profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 20px 0px 20px 0px;
+}
+
+.setting-profile-text-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.setting-profile-text-name > span {
+    color: #ffffff;
+}
+
+.setting-profile-text-detail > span {
+    color: #ffffff;
+}
+.setting-profile-hover-img{
+    position: absolute;
+}
+/*
+.setting-profile-hover{
+    border-radius: 100%;
+    display: flex;
+    justify-content:center;
+    align-items : center;
+}
+.setting-profile-hover:hover{
+    background-color: black;
+}*/

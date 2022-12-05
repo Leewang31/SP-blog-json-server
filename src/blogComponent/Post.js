@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react";
 import Loading from "../component/Loading"
 import {Link} from "react-router-dom";
 import useScrollTop from "../util/useScrollTop";

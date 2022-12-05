@@ -26,7 +26,7 @@ function App() {
                 <div className="windowArea">
                     <Suspense fallback={<Loading/>}>
                         <Routes >
-                            <Route path="/" element={<Home posts={posts}/>}/>
+                            <Route path="/" element={<Home/>}/>
                             <Route path="/post" element={<Post posts={posts} isPending={isPending}/>}/>
                             <Route path="/post/:id" element={<PostDetail/>}/>
                             <Route path="/write" element={<Write/>}/>
